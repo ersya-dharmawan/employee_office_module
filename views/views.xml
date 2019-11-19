@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+  <data>
+    
+    <menuitem id="employee_menu" name="Employee" web_icon="employee_office,static/description/icon.png"/> 
+    <menuitem id="office_menu" name="Office" parent="employee_main_menu"/>
+
+  </data>
+</odoo>
