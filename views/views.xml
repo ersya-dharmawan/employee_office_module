@@ -4,7 +4,14 @@
     <field name="name">view.employee.request.form</field>
     <field name="model">employee.request</field>
     <field name="arch" type="xml">
-      <form string="Employee Request Form">
+      <form name="Employee Request Form">
+        <header>
+          <button name="confirm_request" string="Confirm" class="oe_highlight" states="draft" type="object"/>
+          <button name="validate_request" string="Validate" class="oe_highlight" states="confirm" type="object"/>
+          <button name="approve_request" string="Approve" class="oe_highlight" states="validate" type="object"/>
+          <button name="refuse_request" string="Refuse" states="confirm,validate" type="object"/>
+          <field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate"/>
+        </header>
         <sheet>
           <div class="oe_title">
             <label for="name" class="oe_edit_only"/>
